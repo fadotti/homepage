@@ -152,3 +152,56 @@ div.projects > div.card-container > div.card:nth-child(5) > div:first-child {
 div.projects > div.card-container > div.card:nth-child(6) > div:first-child {
   background-color: cornflowerblue;
 }
+
+div.contact {
+  display: flex;
+  margin: 5rem var(--lateral-margin) 2rem;
+  padding: 3rem 0;
+  justify-content: flex-end;
+  background-color: var(--main-color);
+  box-shadow: 0 0 0 100vmax var(--main-color);
+  clip-path: inset(0 -100vmax); 
+  /* z-index: -1; */
+}
+
+div.contact > img {
+  width: 30rem;
+}
+
+div.contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+
+div.contact > div > div:first-child {
+  font-size: var(--title-font-size);
+}
+
+div.contact div.clickable-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+div.contact svg {
+  height: 2rem;
+}
+
+div.contact > div > div:nth-child(4),
+div.contact > div > div:nth-child(5) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+div.contact > div > div:nth-child(4) svg,
+div.contact > div > div:nth-child(5) svg {
+  fill: white;
+}
+
+div.contact > div > div:nth-child(5) a {
+  color: white;
+}

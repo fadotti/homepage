@@ -4,9 +4,9 @@ body {
   --lateral-margin: 1rem;
   --title-font-size: 2rem;
   --title-font-size-tablet: 1.3rem;
-  --title-font-size-mobile: 3.5rem;
+  --title-font-size-mobile: 3rem;
   --regular-font-size-tablet: 0.6rem;
-  --regular-font-size-mobile: 1.5rem;
+  --regular-font-size-mobile: 1.2rem;
   --title-font-weight: 600;
   --homepage-top-aspect-ratio: calc(588 / 703);
   font-family: "Lexend Mega", sans-serif;
@@ -457,6 +457,12 @@ div.contact svg {
 
   div.contact > div > div {
     padding-bottom: 0.5rem;
+  }
+
+  div.contact > div > div a {
+    padding-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    max-width: 80%;
   }
 
   div.contact > div > div:nth-child(1) {

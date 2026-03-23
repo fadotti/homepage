@@ -291,6 +291,10 @@ div.card > div:nth-child(2) > div:nth-child(2) svg {
 }
 
 @media (max-width: 650px) {
+  body {
+    max-width: 100%;
+  }
+
   div.projects {
     margin: 8rem 0 0;
     max-width: 90vw;

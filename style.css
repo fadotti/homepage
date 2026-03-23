@@ -6,6 +6,7 @@ body {
   --title-font-size-tablet: 1.3rem;
   --title-font-size-mobile: 3.5rem;
   --regular-font-size-tablet: 0.6rem;
+  --regular-font-size-mobile: 1.5rem;
   --title-font-weight: 600;
   --homepage-top-aspect-ratio: calc(588 / 703);
   font-family: "Lexend Mega", sans-serif;
@@ -297,32 +298,33 @@ div.card > div:nth-child(2) > div:nth-child(2) svg {
   }
 
   div.projects > div:first-child {
-    font-size: var(--title-font-size-tablet);
+    font-size: var(--title-font-size-mobile);
+    text-align: center;
   }
 
   div.projects > div.card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   div.projects > div.card-container > div.card  {
-    height: 18rem;
+    height: 35rem;
   }
 
   div.projects > div.card-container > div.card > div:first-child{
-    font-size: var(--title-font-size-tablet);
+    font-size: var(--title-font-size-mobile);
   }
 
   div.projects > div.card-container > div.card > div:nth-child(2) {
-    font-size: var(--regular-font-size-tablet);
+    font-size: var(--regular-font-size-mobile);
   }
 
   div.project-description {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   div.card > div:nth-child(2) > div:nth-child(2) svg {
-    height: 1rem;
+    height: 2rem;
   }
 }
 
@@ -352,7 +354,7 @@ div.projects > div.card-container > div.card:nth-child(6) > div:first-child {
 
 div.contact {
   display: flex;
-  margin: 5rem var(--lateral-margin) 2rem;
+  margin: 5rem var(--lateral-margin) 0rem;
   padding: 3rem 0;
   justify-content: flex-end;
   background-color: var(--main-color);
@@ -413,6 +415,55 @@ div.contact svg {
 
   div.contact svg {
     height: 1.3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  div.contact {
+    max-width: 100vw;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
+  div.contact > img {
+    content: url("./assets/images/homepage_bottom_tablet.JPG");
+    width: 100vw;
+  }
+
+  div.contact > div {
+    gap: 1rem;
+    padding: 0 var(--lateral-margin);
+  }
+
+  div.contact > div > div:first-child {
+    font-size: var(--title-font-size-mobile);
+  }
+  
+  div.contact > div > div:not(:first-child) {
+    font-size: var(--regular-font-size-mobile);
+  }
+
+  div.contact svg {
+    height: 2rem;
+  }
+
+  div.contact div.clickable-icons svg {
+    height: 5rem;
+  }
+
+  div.contact > div > div {
+    padding-bottom: 0.5rem;
+  }
+
+  div.contact > div > div:nth-child(1) {
+    align-self: center;
+  }
+
+  div.contact > div > div:last-child {
+    align-self: center;
+    padding: 3rem 0 10rem;
   }
 }
 

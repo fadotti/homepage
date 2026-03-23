@@ -304,7 +304,8 @@ div.card > div:nth-child(2) > div:nth-child(2) svg {
 
   div.projects > div.card-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0;
+    row-gap: 2rem;
   }
 
   div.projects > div.card-container > div.card  {
@@ -430,6 +431,7 @@ div.contact svg {
   div.contact > img {
     content: url("./assets/images/homepage_bottom_tablet.JPG");
     width: 100vw;
+    max-width: 100%;
   }
 
   div.contact > div {

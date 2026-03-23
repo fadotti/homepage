@@ -3,7 +3,10 @@ body {
   --main-color: #1677F7;
   --lateral-margin: 1rem;
   --title-font-size: 2rem;
+  --title-font-size-tablet: 1.3rem;
+  --regular-font-size-tablet: 0.6rem;
   --title-font-weight: 600;
+  --homepage-top-aspect-ratio: calc(588 / 703);
   font-family: "Lexend Mega", sans-serif;
 }
 
@@ -28,6 +31,7 @@ div.about > img {
   height: auto;
   z-index: 2;
   box-shadow: 0px 0px 13px 0px var(--main-color);
+  /* align-self: flex-end; */
 }
 
 div.about > div:nth-child(3) {
@@ -43,16 +47,22 @@ div.about > div:nth-child(3) {
   place-items: center;
 }
 
+
+
 div.about > div.about-card {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem; */
   max-width: 40rem;
   padding: 1rem;
   box-shadow: 0px 0px 13px 0px var(--main-color);
 }
 
-div.about > div.about-card > div:nth-child(1) {
+div.about > div.about-card div:not(:first-child) {
+  padding: 0.5rem 0;
+}
+
+div.about > div.about-card > div:nth-child(2) {
   font-size: var(--title-font-size);
   font-weight: var(--title-font-weight);
 }
@@ -66,6 +76,59 @@ div.about > div.about-card > div.clickable-icons {
 
 div.about > div.about-card > div.clickable-icons svg {
   height: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  body > div {
+    max-width: 600px;
+    position: relative;
+    left: 5rem;
+  }
+
+  div.about {
+    margin: 0 var(--lateral-margin) 0;
+  }
+
+  div.about > img {
+    width: 15rem;
+  }
+
+  div.about > div:nth-child(3) {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 20rem;
+    color: black;
+    top: 2rem;
+    left: 7rem;
+    place-items: start;
+    height: min-content;
+  }
+
+  div.about > div.about-card {
+    max-width: 20rem;
+    position: relative;
+    top: 5rem;
+    right: 10rem;
+  }
+  
+  div.about > div.about-card > div:nth-child(1) {
+    width: 9rem; /*div.about-card RIGHT value - div.about-card padding*/
+    height: calc(calc(15rem / var(--homepage-top-aspect-ratio)) - 5rem); /*check that div.text-wrapper aligns with wrapping region*/
+    float: left;
+    margin: 0 0.5rem 0.2rem 0;
+  }
+
+  div.about > div.about-card > div:nth-child(2) {
+    font-size: var(--title-font-size-tablet)
+  }
+
+  div.about > div.about-card > div:nth-child(3) {
+    font-size: var(--regular-font-size-tablet);
+  }
+
+  div.about > div.about-card > div.clickable-icons svg {
+    height: 1rem;
+  }
 }
 
 a {
@@ -129,6 +192,42 @@ div.card > div:nth-child(2) > div:nth-child(2) svg {
   height: 1.5rem;
 }
 
+@media (max-width: 1000px) {
+  div.projects {
+    margin: 8rem 0 0;
+    width: calc(600px - 10rem);
+  }
+
+  div.projects > div:first-child {
+    font-size: var(--title-font-size-tablet);
+  }
+
+  div.projects > div.card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  div.projects > div.card-container > div.card  {
+    height: 18rem;
+  }
+
+  div.projects > div.card-container > div.card > div:first-child{
+    font-size: var(--title-font-size-tablet);
+  }
+
+  div.projects > div.card-container > div.card > div:nth-child(2) {
+    font-size: var(--regular-font-size-tablet);
+  }
+
+  div.project-description {
+    font-size: 0.5rem;
+  }
+
+  div.card > div:nth-child(2) > div:nth-child(2) svg {
+    height: 1rem;
+  }
+}
+
 div.projects > div.card-container > div.card:nth-child(1) > div:first-child {
   background-color: crimson;
 }
@@ -161,6 +260,7 @@ div.contact {
   background-color: var(--main-color);
   box-shadow: 0 0 0 100vmax var(--main-color);
   clip-path: inset(0 -100vmax); 
+  align-self: flex-start;
   /* z-index: -1; */
 }
 
@@ -179,6 +279,7 @@ div.contact > div > div:first-child {
   font-size: var(--title-font-size);
 }
 
+
 div.contact div.clickable-icons {
   display: flex;
   gap: 1rem;
@@ -187,6 +288,34 @@ div.contact div.clickable-icons {
 
 div.contact svg {
   height: 2rem;
+}
+
+@media (max-width: 1000px) {
+  div.contact {
+    max-width: calc(600px - 12rem);
+    /* margin: 0; */
+  }
+
+  div.contact > img {
+    content: url("./assets/images/homepage_bottom_tablet.JPG");
+    width: 10rem;
+  }
+
+  div.contact > div {
+    gap: 1rem;
+  }
+
+  div.contact > div > div:first-child {
+    font-size: var(--title-font-size-tablet);
+  }
+  
+  div.contact > div > div:not(:first-child) {
+    font-size: var(--regular-font-size-tablet);
+  }
+
+  div.contact svg {
+    height: 1.3rem;
+  }
 }
 
 div.contact > div > div:nth-child(4),
